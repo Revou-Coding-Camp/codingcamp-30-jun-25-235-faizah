@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TravelSuka - Explore & Enjoy</title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing:border-box; }
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                background: linear-gradient(135deg, #001f3f, #0074D9);
+                min-height: 100vh;
+                overflow-x: hidden;
+                position: relative;
+            }
+            <header, footer {
+                background: rgba(0,0,50,0.6);
+                padding: 1rem;
+                text-align: center;
+            }
+            nav ul { list-style: none; display:flex; justify-content: center; flex-wrap: wrap; }
+            nav ul li { margin: 0.5rem; }
+            nav ul li a {
+                text-decoration: none;
+                color: #00cfff;
+                padding: 0.5rem 1rem;
+                border: 1px solid #00cfff;
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
+            nav ul li a:hover {
+                background: #00cfff;
+                color: #001f3f;
+            }
+            section {
+                padding: 2rem;
+                margin: 1rem;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                backdrop-filter: blur(4px);
+            }
+            <section h2 {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+            .card {
+                background: rgba(0, 0, 0, 0.3);
+                padding: 1rem;
+                border-radius: 8px;
+                width: 250px;
+                text-align: center;
+            }
+            .card img {
+                width: 100%;
+                height: auto;
+                border-radius: 6px;
+                margin-bottom: 0.5rem;
+            }
+            .message form .message .output {
+                background: rgba(0,0,0,0.2);
+                padding: 1rem;
+                border-radius: 8px;
+                width: 300px;
+                margin: 1rem auto;
+            }
+            form label {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+            form input, form textarea {
+                width: 100%;
+                padding: 0.5rem;
+                margin-top: 0.25rem;
+                border: none;
+                border-radius: 4px;
+            }
+            form button {
+                margin-top: 1rem;
+                padding: 0.5rem 1rem;
+                background: #84e0f4;
+                color: #75b4f4;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            form button:hover {
+                background: #055f99;
+                color: white;
+            }
+            /*Partikel bintang, bulan dan awan*/
+            .star, .moon, .cloud {
+                position: absolute;
+                background: rgba(255, 255, 255, 0.8);
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                animation: twinkle 3s infinite;
+            }
+            .cloud {
+                0%, 100% {opacity: 0.2; }
+                50% {opacity: 1; }
+            }
+            @keyframes twinkle {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.5); }
+            }
+            .rain {
+                top: 20%;
+                left: 30%;
+                animation-delay: 0s;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> TravelSuka - Explore&Enjoy </h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Artikel Wisata</a></li>
+                    <li><a href="#">Paket Traveling</a></li>
+                    <li><a href="#">Restoran</a></li>
+                    <li><a href="#">Perkebunan</a></li>
+                    <li><a href="#">Voluntir</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>Artikel Wisata</h2>
+            <div class="card">
+                <img srcset=" https://www.jelajah.org/wp-content/uploads/2021/10/Pantai-Sunrise-Bali-1.jpg" alt="Pantai Sunrise Bali">
+                <p> Menikmati sunrise di pantai tersembunyi dengan pasir putih yang memukau</p>
+                <div class="card">
+                    <img srcset="https://media.istockphoto.com/id/544595640/id/foto/kabut-dan-kabut-dingin-gunung-berapi-bromo-di-indonesia.jpg?s=170667a&w=0&k=20&c=p8j_3i44BhSMdxzIrn-zrdG1byD1FqtVR2YskD-GUYE=" alt="Gunung Bromo">
+                    <p> Petualangan mendaki gunung dan menaklukkan kabut pagi yang dingin</p>
+        </section>
+        <section>
+            <h2>Paket Wisata Traveling</h2>
+            <div class="grid">
+                <div class="card">
+                    <img srcset="https://www.wisatamu.co.id/wp-content/uploads/2020/04/Paket-Wisata-Bali-3-Hari-2-Malam.jpg" alt="Paket Wisata Bali">
+                    <p> Paket 3 Hari 2 Malam: Explore Bali & Gili dengan guide lokal</p>
+            </div>
+            <div class="card">
+                <img srcset="https://tourdieng.id/wp-content/uploads/2022/09/brosur_paket_wisata_dieng_1-1024x791.jpg" alt="Paket Wisata Dieng">
+                <p>Trip Hiking keluarga ke pegunungan Dieng, lengkap homestay & kuliner</p>
+            </div>
+        </section>
+        <section>
+            <h2> Restoran "Mantap" di atas bukit</h2>
+            <div class="grid">
+                <div class="card">
+                    <img srcset="https://img.restaurantguru.com/rcab-Qween-Angkringan-menu.jpg" alt="Menu Spesial">
+                    <p> Menu Spesial: Ikan Bakar sambal kecombrang, es kelapa alpukat, & kopi vanila lokal</p>
+                </div>
+                <div class="card">
+                    <img srcset="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1035/2023/11/06/millenial-coffee-85873364.jpg" alt="Kopi Spesial">
+                    <p> Pemandangan sunset menakjubkan dengan harga terjangkau</p>
+                </div>
+        </section>
+        <section>
+            <h2> Program Voluntir </h2>
+            <div class="grid">
+                <div class="card">
+                    <img srcset="https://www.krajan.id/wp-content/uploads/2024/02/mahasiswa-KKN-KKN-UNEJ-01-berfoto-bersama-dengan-peserta-Lomba-mewarnai-yang-didampingi-wali-murid-di-Taman-Baca-Desa-Tumpeng-768x576.jpg" alt="Voluntir Sosial">
+                    <p> Ikut mengajar anak anak desa dan membangun taman baca</p>
+                </div>
+                <div class="card">
+                    <img srcset="https://opiniremaja.com/wp-content/uploads/2023/12/1-66.jpg" alt="Voluntir Lingkungan">
+                    <p> Program penanaman 1000 pohon bersama komunitas Lingkungan</p>
+                </div>
+        </section>
+        <section>
+            <h2>Perkebunan dan Peternakan</h2>
+            <div class="grid">
+                <div class="card">
+                    <img srcset="https://video.cgtn.com/news/3d3d674e33556a4d31457a6333566d54/video/167a0c296d38448db0f8491231cd6f2e/167a0c296d38448db0f8491231cd6f2e.jpg" alt="Perkebunan Buah">
+                    <p> Perkebunan buah mangga, rambutan, tomat, pepaya, salak, pisang, jambu yang bisa di petik langsung</p>
+                </div>
+                <div class="card">
+                    <img srcset="https://awsimages.detik.net.id/community/media/visual/2021/02/04/dev-wisata-peternakan-di-aceh-bisa-minum-susu-lho-1.jpeg?w=600&q=90">
+                    <p> Peternakan ayam kampung,sapi dan kolam lele untuk wisata edukasi ternak dan memancing di lingkungan yang asri</p>
+                </div>
+                </div>
+        </section>
+        <section class="message">
+            <h2>Pemesanan</h2>
+            <form id="messageForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Kirim</button>
+            </form>
+            <div class="output" id="outputBox">
+                <h2> Hubungi Kami </h2>
+                <p><strong> current time: Jumat, 4 Juni 2025 18:33</strong></p>
+                <p><strong>Nama: Faizah Nurul Fadhilah</strong></p>
+                <p><strong>Email: faizahnurulf@gmail.com </strong></p>
+                <p><strong>Jenis Kelamin: Perempuan </strong></p></strong></p>
+            </div>
+        </section>
+        <footer>
+            Created by TravelSuka 2025
+        </footer>
+
+        <script>
+            document.getElementById('messageForm' ).addEventListener('submit' , function(e) {
+                e.preventDefault();
+                const nama = this.nama.value;
+                const tanggal = this.tanggal_lahir.value;
+                const gender = this.gender.value;
+                const pesan = this.pesan.value;
+                const currentTime = new
+                Date(). toString();
+                const outputBox =
+                document.getElementById('outputBox');
+                outputBox.innerHTML = 
+                <p><strong>current time:</strong>
+                    ${currentTime}</p>
+                <p><strong>Nama:</strong> ${nama}</p>
+                <p><strong>Tanggal Lahir:</strong> ${tanggal}</p>
+                <p><strong>Jenis Kelamin:</strong> ${gender}</p>
+                <p><strong>Pesan:,/strong> ${ pesan}</p>;
+                    this.reset();
+            });
+            // Hiasan bintang
+            for (let i + 0; i < 100; i++) {
+                let star =
+                document.createElement('div');
+                star.classList.add('star');
+                star.style.top = Math.random() *
+                winow.innerHeight + 'px' ;
+                star.style.animationDuration = 
+                (Math.random( ) * 3 + 2) + 's';
+                document.body.appendChild(star);
+            }
+        </script>
+
+    </body>
+</html>
